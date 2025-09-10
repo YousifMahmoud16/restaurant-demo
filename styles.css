@@ -1,0 +1,37 @@
+:root { --accent:#2b7cff; --card:#f9f9f9; --maxw:900px; }
+*{box-sizing:border-box}
+body{
+  font-family:Arial, sans-serif;
+  margin:0;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  background:#fff;
+}
+.container{max-width:var(--maxw); width:100%;}
+.header{
+  max-width:var(--maxw);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+  color:#fff;
+  background:var(--accent);
+  padding:14px 18px;
+  border-radius:10px;
+}
+.brand{margin:0;font-size:1.2rem}
+.nav a{color:white;text-decoration:none;margin-left:12px;font-size:0.95rem}
+main{max-width:var(--maxw); width:100%}
+.hero{padding:30px;text-align:center;margin-bottom:16px;border-radius:10px;background:linear-gradient(180deg,#eef6ff,#fff)}
+.hero h2{margin:0 0 8px}
+.card{padding:18px;margin-bottom:14px;border-radius:10px;background:var(--card)}
+.menu-list{list-style:none;padding:0;margin:0}
+.menu-list li{padding:8px 0;border-bottom:1px solid #eee}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ddd}
+.btn{display:inline-block;padding:10px 14px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+.small{color:#666;font-size:0.9rem;margin-top:8px}
+.footer{text-align:center;color:#666;margin-top:12px;font-size:0.9rem}
+@media (min-width:800px){
+  body{padding:30px}
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Local Bites - Demo Restaurant</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="brand">Local Bites</h1>
+        <nav class="nav">
+            <a href="#menu">Menu</a>
+            <a href="#booking">Book</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h2>Delicious food, every day</h2>
+            <p>Open 9:00 — 23:00</p>
+            <a href="#booking" class="btn">Book a table</a>
+        </section>
+
+        <section id="menu" class="card">
+            <h3>Our Menu</h3>
+            <ul class="menu-list">
+                <li>Margherita Pizza — $6.99</li>
+                <li>Penne Arrabiata — $7.50</li>
+                <li>Greek Salad — $5.00</li>
+            </ul>
+        </section>
+
+        <section id="booking" class="card">
+            <h3>Book a table</h3>
+            <!-- Calendly embed: استبدل YOUR_CALENDLY_LINK بالرابط الخاص بك -->
+            <div class="calendly-wrapper">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/yousifmahmoud465/30min"
+                    style="min-width:320px;height:430px;"></div>
+                <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h3>Contact us</h3>
+            <!-- Formspree example: استبدل YOUR_FORM_ID بالـ endpoint من Formspree -->
+            <form action="https://formspree.io/f/xdklbweq" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="_replyto" placeholder="Email" required />
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+            <p class="small">Or call: +20 1X XXX XXXX</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Local Bites — Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>.

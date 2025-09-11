@@ -9,13 +9,17 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="brand">Local Bites</h1>
-        <nav class="nav">
-            <a href="#menu">Menu</a>
-            <a href="#booking">Book</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Local Bites</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -36,7 +40,6 @@
 
         <section id="booking" class="card">
             <h3>Book a table</h3>
-            <!-- Calendly embed: استبدل YOUR_CALENDLY_LINK بالرابط الخاص بك -->
             <div class="calendly-wrapper">
                 <div class="calendly-inline-widget" data-url="https://calendly.com/yousifmahmoud465/30min"
                     style="min-width:320px;height:430px;"></div>
@@ -46,7 +49,6 @@
 
         <section id="contact" class="card">
             <h3>Contact us</h3>
-            <!-- Formspree example: استبدل YOUR_FORM_ID بالـ endpoint من Formspree -->
             <form action="https://formspree.io/f/xdklbweq" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your name" required />
                 <input type="email" name="_replyto" placeholder="Email" required />
@@ -61,7 +63,12 @@
         <p>&copy; Local Bites — Demo</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("scrolled", window.scrollY > 50);
+        });
+    </script>
 </body>
 
 </html>

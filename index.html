@@ -4,71 +4,197 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Local Bites - Demo Restaurant</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Local Bites — Demo Restaurant</title>
+    <meta name="description"
+        content="Local Bites — Demo restaurant landing page. Book a table, view menu and contact." />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
+    <!-- NAVBAR -->
+    <header class="navbar" role="banner">
         <div class="container nav-container">
-            <div class="logo">Local Bites</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a class="brand" href="#" aria-label="Local Bites Home">
+                <span class="logo">Local Bites</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="primary-navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+
+            <nav id="primary-navigation" class="nav" role="navigation" aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a class="btn btn-outline order-btn" href="#menu">Order Online</a>
+            </nav>
         </div>
     </header>
 
     <main>
+        <!-- HERO -->
         <section id="hero" class="hero">
-            <h2>Delicious food, every day</h2>
-            <p>Open 9:00 — 23:00</p>
-            <a href="#booking" class="btn">Book a table</a>
-        </section>
+            <div class="container hero-inner">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1>Delicious food,<br><span class="brand-highlight">every day</span></h1>
+                    <p class="lead">Fresh ingredients · Friendly service · Cozy place. Open 9:00 — 23:00</p>
+                    <div class="hero-cta">
+                        <a href="#booking" class="btn btn-primary">Book a table</a>
+                        <a href="#menu" class="btn btn-ghost">See menu</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span class="chip"><i class="fa fa-clock"></i> Open: 9:00 — 23:00</span>
+                        <span class="chip"><i class="fa fa-phone"></i> +20 1032145574</span>
+                    </div>
+                </div>
 
-        <section id="menu" class="card">
-            <h3>Our Menu</h3>
-            <ul class="menu-list">
-                <li>Margherita Pizza — $6.99</li>
-                <li>Penne Arrabiata — $7.50</li>
-                <li>Greek Salad — $5.00</li>
-            </ul>
-        </section>
-
-        <section id="booking" class="card">
-            <h3>Book a table</h3>
-            <div class="calendly-wrapper">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/yousifmahmoud465/30min"
-                    style="min-width:320px;height:430px;"></div>
-                <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <div class="hero-media" data-aos="fade-left">
+                    <!-- ضع هنا صورة Hero مناسبة داخل مجلد images (مثال: images/hero-restaurant.jpg) -->
+                    <img src="/images/pexels-iina-luoto-460132-1211887.webp" alt="Plate of food on table"
+                        loading="lazy">
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="card">
-            <h3>Contact us</h3>
-            <form action="https://formspree.io/f/xdklbweq" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your name" required />
-                <input type="email" name="_replyto" placeholder="Email" required />
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
-            <p class="small">Or call: +20 1032145574</p>
+        <!-- MENU -->
+        <section id="menu" class="section section-alt">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <p class="section-sub">Popular dishes made with love — quick, fresh and tasty.</p>
+
+                <div class="menu-grid">
+                    <article class="menu-card">
+                        <div class="menu-thumb" aria-hidden="true"><i class="fa fa-pizza-slice"></i></div>
+                        <div class="menu-body">
+                            <h3>Margherita Pizza</h3>
+                            <p class="muted">Tomato sauce, mozzarella, fresh basil.</p>
+                        </div>
+                        <div class="menu-price">$6.99</div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-thumb" aria-hidden="true"><i class="fa fa-utensils"></i></div>
+                        <div class="menu-body">
+                            <h3>Penne Arrabiata</h3>
+                            <p class="muted">Spicy tomato sauce, garlic, parmesan.</p>
+                        </div>
+                        <div class="menu-price">$7.50</div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-thumb" aria-hidden="true"><i class="fa fa-seedling"></i></div>
+                        <div class="menu-body">
+                            <h3>Greek Salad</h3>
+                            <p class="muted">Cucumber, tomato, feta, olives, lemon dressing.</p>
+                        </div>
+                        <div class="menu-price">$5.00</div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-thumb" aria-hidden="true"><i class="fa fa-fish"></i></div>
+                        <div class="menu-body">
+                            <h3>Grilled Salmon</h3>
+                            <p class="muted">Seasonal veg, lemon butter sauce.</p>
+                        </div>
+                        <div class="menu-price">$12.50</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING -->
+        <section id="booking" class="section">
+            <div class="container booking-grid">
+                <div class="booking-card" data-aos="fade-up">
+                    <h2>Book a table</h2>
+                    <p class="muted">Choose a time that suits you — instant confirmation via Calendly.</p>
+                    <!-- Calendly embed -->
+                    <div class="calendly-wrapper">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/yousifmahmoud465/30min"
+                            style="min-width:320px;height:430px;"></div>
+                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    </div>
+                </div>
+
+                <aside class="contact-card" data-aos="fade-left">
+                    <h3>Contact & Hours</h3>
+                    <p class="muted">Call to reserve or ask about private events.</p>
+                    <ul class="info-list">
+                        <li><strong>Phone:</strong> +20 1032145574</li>
+                        <li><strong>Address:</strong> 12 Nile Street, Cairo</li>
+                        <li><strong>Hours:</strong> Mon–Sun 9:00 — 23:00</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2>Contact us</h2>
+                <p class="section-sub">Questions, catering or feedback? Send us a message.</p>
+
+                <div class="contact-grid">
+                    <form action="https://formspree.io/f/xdklbweq" method="POST" class="contact-form"
+                        data-aos="fade-up">
+                        <label>
+                            <span class="label">Your name</span>
+                            <input type="text" name="name" required>
+                        </label>
+
+                        <label>
+                            <span class="label">Email</span>
+                            <input type="email" name="_replyto" required>
+                        </label>
+
+                        <label>
+                            <span class="label">Message</span>
+                            <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
+                        </label>
+
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                    </form>
+
+                    <div class="contact-info" data-aos="fade-left">
+                        <h3>Other ways to reach us</h3>
+                        <p class="muted">We typically respond within 24 hours.</p>
+                        <p><strong>Phone:</strong> +20 1032145574</p>
+                        <p><strong>Email:</strong> hello@localbites.example</p>
+
+                        <div class="socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; Local Bites — Demo</p>
+        <div class="container footer-inner">
+            <p>&copy; Local Bites — Demo • Designed & built by Yousif</p>
+        </div>
     </footer>
 
-    <script>
-        window.addEventListener("scroll", function () {
-            const navbar = document.querySelector(".navbar");
-            navbar.classList.toggle("scrolled", window.scrollY > 50);
-        });
-    </script>
+    <!-- AOS for subtle animations (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>if (window.AOS) AOS.init({ duration: 700, once: true });</script>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
